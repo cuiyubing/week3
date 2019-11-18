@@ -4,6 +4,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:10086/eureka
+    fetch-registry: true #获取微服务注册表，用于feign或zuul
 management:
   endpoints:
     web:
