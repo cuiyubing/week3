@@ -1,6 +1,7 @@
 package com.bw.entity;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,8 +20,10 @@ public class MoneysVO implements Serializable {
     private String huiName;
 
     //回款开始时间
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date huiTimestart;
     //汇款结束时间
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date huiTimeend;
     //余款
     private String propName;
