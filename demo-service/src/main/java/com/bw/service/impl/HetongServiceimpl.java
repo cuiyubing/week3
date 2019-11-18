@@ -35,7 +35,7 @@ public class HetongServiceimpl implements HetongService {
                 //根据收款人
                 if(moneysVO.getType()!=null&&!moneysVO.getType().equals("")) {
                     if (moneysVO.getHuiName() != null && !moneysVO.getHuiName().equals("")) {
-                        Predicate c = cb.like(root.get("huiName"), moneysVO.getHuiName());
+                        Predicate c = cb.like(root.get("huiName"), "%"+moneysVO.getHuiName()+"%");
                         list.add(c);
                     }
                 }
@@ -54,7 +54,7 @@ public class HetongServiceimpl implements HetongService {
                 }
                 //根据合同编号查询
                 if(moneysVO.getId()!=null&&!moneysVO.getId().equals("")){
-                    Predicate c3 = cb.like(root.get("id"), moneysVO.getId());
+                    Predicate c3 = cb.like(root.get("id"), "%"+moneysVO.getId()+"%");
                     list.add(c3);
                 }
                 //回款日期
