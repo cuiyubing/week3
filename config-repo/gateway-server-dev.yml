@@ -1,0 +1,19 @@
+server:
+  port: 10010
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product_route
+          uri: lb://demo-service
+          predicates:
+            - Path=/sell/buyer/**
+          filters:
+            - StripPrefix=2
+          order: 0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+    fetch-registry: true
+    register-with-eureka: true
