@@ -14,3 +14,4 @@ zuul:
   routes:
     demo-service:
       serviceId: demo-service
+      path: /demo_server/**
