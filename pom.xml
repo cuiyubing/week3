@@ -8,6 +8,7 @@
         <module>config_server</module>
         <module>demo-service</module>
         <module>zuul_server</module>
+        <module>gateway_server</module>
     </modules>
 
     <parent>
